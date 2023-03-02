@@ -1,9 +1,9 @@
-export type User ={
+export interface IUser {
   email: string,
   password: string
 }
 
-const login = ({ email, password }: User) => {
+const login = ({ email, password }: IUser) => {
   const delay = (0.7 + Math.random() * 2) * 1000;
 
   return new Promise<void>((resolve, reject) => {
